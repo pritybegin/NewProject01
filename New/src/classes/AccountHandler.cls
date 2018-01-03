@@ -1,5 +1,6 @@
 public class AccountHandler {
     public static Account insertNewAccount (String accName){
+    	//just checking
     if(accName!=''){    
         try{
             Account a = new Account(Name=accName);
