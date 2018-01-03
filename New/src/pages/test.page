@@ -1,0 +1,15 @@
+<apex:page sidebar="false" showHeader="false" standardController="Case" extensions="Casetest">
+  <apex:form >
+    <apex:pageBlock >
+        
+        <apex:pageBlockSection >
+           <apex:inputText required="true" value="{!Case.Subject}"/>
+        </apex:pageBlockSection>    
+        <apex:pageBlockSection >
+            <apex:inputTextArea required="true" rows="5" value="{!Case.Description}"/> 
+        </apex:pageBlockSection>
+
+        <apex:commandButton action="{!Save}" value="Save" /> 
+    </apex:pageBlock> 
+ </apex:form>
+</apex:page>

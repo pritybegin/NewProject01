@@ -1,0 +1,21 @@
+<apex:page Controller="demoClass">
+
+    <apex:form > 
+        <apex:actionFunction name="sayHello" action="{!testmed}" rerender="none" /> 
+   
+ <script type="text/javascript">
+   function displayAlert()
+   {
+       alert("Hello");
+       sayHello();
+   }
+ </script>
+   <body>
+   
+   
+   <button value="submit" onclick="displayAlert();">Submit</button>
+   
+   </body>
+  </apex:form> 
+
+   </apex:page>

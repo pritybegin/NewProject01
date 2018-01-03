@@ -1,0 +1,10 @@
+<apex:page >
+    <apex:includeScript value="/support/console/32.0/integration.js"/>
+    <script>
+        var eventHandler = function (result) {
+            sforce.console.openPrimaryTab(null,'/apex/try1',true,'Account Search',null,'Account Search');
+            sforce.console.setCustomConsoleComponentVisible(false);
+        };
+        sforce.console.onCustomConsoleComponentButtonClicked(eventHandler);
+    </script>
+</apex:page>

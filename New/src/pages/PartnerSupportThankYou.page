@@ -1,0 +1,29 @@
+<apex:page controller="PartnerSupport" action="{!Support}">
+  
+  
+   <apex:includeScript value="/support/console/20.0/integration.js"/> 
+<script>
+function SetTabTitle() {
+                  sforce.console.setTabTitle('PartnerSupport');
+              }
+              var pageLoad = window.onload;
+              window.onload = function() {
+                  if (pageLoad) {
+                      pageLoad();
+                  }
+                  SetTabTitle();
+                  alert('hi');                  
+              
+              };
+              }
+              </script>
+
+  <apex:pageBlock >
+  Name:
+   <apex:outputText value="{!strName.Name}"></apex:outputText>  
+      
+  </apex:pageBlock>
+  
+  This is your new Page: PartnerSupportThankYou
+  
+</apex:page>

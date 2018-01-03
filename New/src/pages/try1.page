@@ -1,0 +1,31 @@
+<apex:page >
+
+     <A HREF="#" onClick="testOpenPrimaryTab();testOpenPrimaryTab1();">
+         Click here to open a new primary tab</A> 
+
+    <apex:includeScript value="/support/console/22.0/integration.js"/>
+    <script type="text/javascript">
+        function testOpenPrimaryTab() {
+            //Open a new primary tab with the salesforce.com home page in it
+            sforce.console.openPrimaryTab(null, 'apex/PartnerSupportThankYou', false, 
+                'salesforce', openSuccess, 'salesforceTab');
+                
+        function testOpenPrimaryTab1() {
+            //Open a new primary tab with the salesforce.com home page in it
+            sforce.console.openPrimaryTab(null, 'apex/AccountSearch', false, 
+                'salesforce', openSuccess, 'salesforceTab');
+                
+        }
+        
+        var openSuccess = function openSuccess(result) {
+            //Report whether opening the new tab was successful
+            if (result.success == true) {
+                alert('Primary tab successfully opened');
+            } else {
+                alert('Primary tab cannot be opened');
+            }
+        };
+        
+  </script>
+
+</apex:page>

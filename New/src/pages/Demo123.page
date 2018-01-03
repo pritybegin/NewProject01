@@ -1,0 +1,21 @@
+<apex:page sidebar="false" showHeader="false" id="pg">
+    <script src="{!$Resource.Jquery}"/>
+        <script type='text/javascript'>
+        function abc()
+        {
+            var text = document.getElementById('pg:frm:demoInput');
+            alert('hello'+text.value);
+            var myid = "pg:frm:demoInput";
+            alert($('#'+myid).value);
+        }
+    </script>
+    <apex:form id="frm">   <apex:commandButton value="click me" onclick="abc();return false;"/>
+    <textarea id="demoInput"/>
+    <apex:inputtext id="demoInput"/>
+    </apex:form>
+ 
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Congratulations</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

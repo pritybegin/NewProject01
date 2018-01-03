@@ -1,0 +1,48 @@
+<apex:page controller="AccountSearch" >
+    <apex:form >
+        Account Number: 
+        <apex:inputtext value="{!strAccNum}"/><br/>
+    
+        Name: 
+        <apex:inputtext value="{!strName}"/><br/>
+    
+        Phone: 
+        <apex:inputtext value="{!strPhone}"/><br/><br/>
+        
+        <apex:commandButton action="{!FetchData}" value="Search" onclick="{!render}"/>
+        <apex:commandButton action="{!clearPage}" value="Clear" onclick="{!render}" />
+        
+        <br/><br/><br/><br/>
+       
+    
+   
+              
+      <!-- Abhishri
+      <script type="text/javascript">
+        function testOpenPrimaryTab() {
+            //Open a new primary tab with the salesforce.com home page in it
+            sforce.console.openPrimaryTab(null, 'apex/PartnerSupportThankYou', false,
+                'salesforce', openSuccess, 'salesforceTab'); 
+        
+        }-->
+        
+       
+  
+
+        <apex:outputPanel id="TableidPanel" rendered="{!render}">
+            <apex:pageBlock id="Tableid">
+                 <apex:pageBlockTable var="Account" value="{!lstAccount}">
+                    <apex:column headerValue="Acc">   
+                        <apex:outputLink value="/{!Account.Id}" target="_blank"> {!Account.AccountNumber}
+                        <p><a href="#" onclick="srcUp('apex/PartnerSupportThankYou?Id={!Account.Id}');srcUp('apex/DisplayUserInfo')">{!Account.Id}</a></p>
+                        <apex:param name="Id" value="{!Account.Id}"/>
+                        </apex:outputLink>
+                    </apex:column> 
+                    <apex:column value="{!Account.Name}"/>   
+                    <apex:column value="{!Account.Phone }"/>  
+                 </apex:pageBlockTable>
+           </apex:pageBlock>
+       </apex:outputPanel>
+        
+    </apex:form>
+</apex:page>

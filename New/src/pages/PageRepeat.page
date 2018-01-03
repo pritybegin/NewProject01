@@ -1,0 +1,21 @@
+<apex:page standardController="Account">
+              
+          <apex:repeat var="contacts" value="{!Account.Contacts}">
+          <apex:pageBlock title="hello" >
+           <apex:pageBlockSection > 
+
+  
+                  <apex:outputField value="{!contacts.Firstname}"/>            
+                <apex:outputField value="{!contactS.lastname}"/>
+                </apex:pageBlockSection>
+
+                <apex:pageBlockSection >
+                <apex:outputField value="{!contactS.email}"/>
+
+                </apex:pageBlockSection>
+              </apex:pageBlock>
+
+                                  
+           
+         </apex:repeat>
+ </apex:page>
